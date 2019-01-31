@@ -1,7 +1,5 @@
 package main;
 
-import com.xuan.study.model.XmlIconFont;
-import com.xuan.study.util.OSinfo;
 
 import org.xml.sax.SAXException;
 
@@ -12,18 +10,21 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import static com.xuan.study.Common.RESULT_PAHT;
+import main.model.XmlIconFont;
+import main.util.OSinfo;
 
-public class Main {
-    public static final String FONT_STRING_PATH = "src/com/xuan/study/string.xml";
+import static main.Common.RESULT_PATH;
 
-    public static void main(String[] args) {
+
+public class Preview {
+
+    public static void go(String ttfPath,String stringPath) {
 
         SAXParserFactory spf = SAXParserFactory.newInstance();
         XmlIconFont result = null;
         try {
             SAXParser sp = spf.newSAXParser();
-            FileInputStream inputStream = new FileInputStream(FONT_STRING_PATH);
+            FileInputStream inputStream = new FileInputStream(stringPath);
             IconFontXmlParser parser = new IconFontXmlParser();
             sp.parse(inputStream, parser);
             result = new XmlIconFont(parser.getFonts(), parser.getMaxValue(),
@@ -31,12 +32,12 @@ public class Main {
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
-        HtmlPrinter.init(result).printer();
+        HtmlPrinter.init(result).printer(ttfPath);
         try {
             if (OSinfo.isWindows()) {
-                Runtime.getRuntime().exec("cmd.exe /c start " + RESULT_PAHT);
+                Runtime.getRuntime().exec("cmd.exe /c start " + RESULT_PATH);
             } else {
-                Runtime.getRuntime().exec("open " + RESULT_PAHT);
+                Runtime.getRuntime().exec("open " + RESULT_PATH);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,4 +1,5 @@
-package com.xuan.study;
+package main;
+
 
 /**
  * Author : xuan.
@@ -6,10 +7,12 @@ package com.xuan.study;
  * Description :the description of this file
  */
 public class Common {
+    public static String ROOT_PATH = null;
     public static final String ICON_START = "\\ue";
-    public static final String HTML_PATH = "src/com/xuan/study/html/iconfont.html";
-    public static final String RESULT_PAHT = "src/com/xuan/study/html/result.html";
-    public static final String FONT_PATH = "src/com/xuan/study/iconfont.ttf";
+    public static final String FONT_STRING_PATH = "%s/app/src/main/string.xml";
+    public static final String HTML_PATH = "/main/html/iconfont.html";
+    public static String RESULT_PATH = "/preview_result.html";
+    public static final String FONT_PATH = "/main/iconfont.ttf";
     public static final String NONE_DEFINE = "未定义";
     /**
      * 创建li
@@ -32,4 +35,9 @@ public class Common {
             "Safari, Android, iOS 4.2+*/\n" +
             "          url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */\n" +
             "        }";
+
+    public static String tranPath(String path) {
+        //return String.format(path, ".");
+        return path;
+    }
 }

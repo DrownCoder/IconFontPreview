@@ -1,4 +1,4 @@
-package com.xuan.study.model;
+package main.model;
 
 /**
  * Author : xuan.

@@ -1,6 +1,5 @@
-package com.xuan.study;
+package main;
 
-import com.xuan.study.model.XmlIconFontModel;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -10,10 +9,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import static com.xuan.study.Common.ICON_START;
+import main.model.XmlIconFontModel;
+
+import static main.Common.ICON_START;
+
 
 /**
  * Author : xuan.
@@ -50,10 +50,8 @@ public class IconFontXmlParser extends DefaultHandler {
         String value = new String(ch, start, length);
         String result;
         //过滤换行符和空格
-        Pattern p = Pattern.compile("\\s*|\t|\r|\n");
-        Matcher m = p.matcher(value);
-        result = m.replaceAll("");
-        if (result == null || result.isEmpty()) {
+        result = value.trim();
+        if (result.isEmpty()||result.contains("\n")) {
             return;
         }
 //        System.out.println(result);
@@ -69,6 +67,7 @@ public class IconFontXmlParser extends DefaultHandler {
             if (model.getFontKey().startsWith("icon_font")
                     || model.getFontValue().startsWith(ICON_START)) {
                 result.put(model.getFontValue(), model);
+                System.out.println(model.getFontValue());
                 int value = Integer.valueOf(model.getFontValue().substring(3), 16);
                 if (minValue == 0) {
                     //初始化

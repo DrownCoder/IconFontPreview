@@ -1,8 +1,5 @@
-package com.xuan.study;
+package main;
 
-import com.xuan.study.model.XmlIconFont;
-import com.xuan.study.model.XmlIconFontModel;
-import com.xuan.study.util.Utils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -11,10 +8,15 @@ import org.jsoup.select.Elements;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import static com.xuan.study.Common.NONE_DEFINE;
-import static com.xuan.study.Common.RESULT_PAHT;
+import main.model.XmlIconFont;
+import main.model.XmlIconFontModel;
+import main.util.Utils;
+
+import static main.Common.NONE_DEFINE;
+import static main.Common.RESULT_PATH;
 
 
 /**
@@ -33,12 +35,12 @@ public class HtmlPrinter {
         this.data = data;
     }
 
-    public void printer() {
-        File html = new File(Common.HTML_PATH);
+    public void printer(String ttfPath) {
+        InputStream html = this.getClass().getResourceAsStream(Common.HTML_PATH);
         try {
-            Document doc = Jsoup.parse(html, "UTF-8");
+            Document doc = Jsoup.parse(html, "UTF-8", "");
             Elements style = doc.select("style");
-            style.prepend(String.format(Common.STYLE_DF, "../iconfont.ttf"));
+            style.prepend(String.format(Common.STYLE_DF, ttfPath));
             Elements container = doc.getElementsByClass("icon_lists clear");
             for (int i = data.getMinValue(); i <= data.getMaxValue(); i++) {
                 String hexValue = Utils.parseHexTCode(i);
@@ -51,7 +53,7 @@ public class HtmlPrinter {
                 }
                 container.append(String.format(Common.ICON_ITEM, value, key, code));
             }
-            File result = new File(RESULT_PAHT);
+            File result = new File(Common.tranPath(RESULT_PATH));
             if (!result.exists()) {    //文件不存在则创建文件，先创建目录
                 result.createNewFile();
             }

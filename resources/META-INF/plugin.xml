@@ -31,7 +31,7 @@
   <actions>
     <!-- Add your actions here -->
     <action id="IconfontPreview.PreviewAction" class="PreviewAction" text="IconFontPreview"
-        description="preview the string value of iconfont" icon="image/preview.png"
+        description="preview the string value of iconfont" icon="/image/cap.png"
     >
       <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
     </action>

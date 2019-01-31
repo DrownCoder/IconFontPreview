@@ -1,6 +1,4 @@
-package com.xuan.study.util;
-
-import static com.xuan.study.Common.ICON_START;
+package main.util;
 
 /**
  * Author : xuan.

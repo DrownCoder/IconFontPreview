@@ -1,4 +1,4 @@
-package com.xuan.study.util;
+package main.util;
 
 public enum EPlatform {
 	Any("any"),
