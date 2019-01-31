@@ -23,6 +23,8 @@ import static main.Common.ICON_START;
 public class IconFontXmlParser extends DefaultHandler {
     private List<XmlIconFontModel> fonts;
     private HashMap<String, XmlIconFontModel> result;
+    private StringBuilder sb;
+    private boolean flag = false;
 
     private int minValue;
     private int maxValue;
@@ -35,27 +37,39 @@ public class IconFontXmlParser extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (!qName.equals("string")) {
+            flag = false;
             return;
         }
         XmlIconFontModel model = new XmlIconFontModel();
         model.setFontKey(attributes.getValue(0));
         fonts.add(model);
+        sb = new StringBuilder();
+        flag = true;
     }
 
     @Override
     public void characters(char[] ch, int start, int length) {
-        if (fonts == null || fonts.size() == 0) {
+        if (fonts == null || fonts.size() == 0 || !flag) {
             return;
         }
         String value = new String(ch, start, length);
         String result;
         //过滤换行符和空格
         result = value.trim();
-        if (result.isEmpty()||result.contains("\n")) {
+        if (result.isEmpty() || result.contains("\n")) {
             return;
         }
-//        System.out.println(result);
-        fonts.get(fonts.size() - 1).setFontValue(result);
+        sb.append(value);
+    }
+
+    @Override
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        super.endElement(uri, localName, qName);
+        flag = false;
+        if (sb != null && sb.length() > 0) {
+            fonts.get(fonts.size() - 1).setFontValue(sb.toString());
+            System.out.println(sb.toString());
+        }
     }
 
     @Override

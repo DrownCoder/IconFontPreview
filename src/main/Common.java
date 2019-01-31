@@ -11,7 +11,7 @@ public class Common {
     public static final String ICON_START = "\\ue";
     public static final String FONT_STRING_PATH = "%s/app/src/main/string.xml";
     public static final String HTML_PATH = "/main/html/iconfont.html";
-    public static String RESULT_PATH = "/preview_result.html";
+    public static String RESULT_PATH = "%s/preview_result.html";
     public static final String FONT_PATH = "/main/iconfont.ttf";
     public static final String NONE_DEFINE = "未定义";
     /**

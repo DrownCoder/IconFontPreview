@@ -1,3 +1,5 @@
+package main;
+
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -19,22 +21,11 @@ public class PreviewAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
         Project project = e.getData(PlatformDataKeys.PROJECT);
-        String pathName = FileUtil.getAppPackageName(project);
-        if (project == null) {
-            return;
-        }
         String rootPath = project.getBasePath();
-        String[] path = pathName.split("\\.");
-        StringBuilder localPath = new StringBuilder();
-        for (String pathItem : path) {
-            localPath.append(pathItem).append("/");
-        }
-        //String iconfontPath = localPath + "assets/" + "iconfont.ttf";
         String iconfontPath = rootPath + "/app/src/main/assets/iconfont.ttf";
-        //String stringPath = localPath + "/res/" + "string.xml";
         String stringPath = rootPath + "/app/src/main/res/values/string.xml";
         Common.ROOT_PATH = rootPath + "/app/src";
-        Common.RESULT_PATH = rootPath + Common.RESULT_PATH;
+        Common.RESULT_PATH = String.format(Common.RESULT_PATH, rootPath);
         Preview.go(iconfontPath, stringPath);
     }
 }

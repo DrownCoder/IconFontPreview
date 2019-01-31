@@ -39,19 +39,21 @@ public class HtmlPrinter {
         InputStream html = this.getClass().getResourceAsStream(Common.HTML_PATH);
         try {
             Document doc = Jsoup.parse(html, "UTF-8", "");
-            Elements style = doc.select("style");
-            style.prepend(String.format(Common.STYLE_DF, ttfPath));
-            Elements container = doc.getElementsByClass("icon_lists clear");
-            for (int i = data.getMinValue(); i <= data.getMaxValue(); i++) {
-                String hexValue = Utils.parseHexTCode(i);
-                String code = "\\ue" + hexValue;
-                String value = "&#xe" + hexValue + ";";
-                XmlIconFontModel keyModel = data.getFonts().get(code);
-                String key = NONE_DEFINE;
-                if (keyModel != null) {
-                    key = keyModel.getFontKey();
+            if (data != null) {
+                Elements style = doc.select("style");
+                style.prepend(String.format(Common.STYLE_DF, ttfPath));
+                Elements container = doc.getElementsByClass("icon_lists clear");
+                for (int i = data.getMinValue(); i <= data.getMaxValue(); i++) {
+                    String hexValue = Utils.parseHexTCode(i);
+                    String code = "\\ue" + hexValue;
+                    String value = "&#xe" + hexValue + ";";
+                    XmlIconFontModel keyModel = data.getFonts().get(code);
+                    String key = NONE_DEFINE;
+                    if (keyModel != null) {
+                        key = keyModel.getFontKey();
+                    }
+                    container.append(String.format(Common.ICON_ITEM, value, key, code));
                 }
-                container.append(String.format(Common.ICON_ITEM, value, key, code));
             }
             File result = new File(Common.tranPath(RESULT_PATH));
             if (!result.exists()) {    //文件不存在则创建文件，先创建目录
