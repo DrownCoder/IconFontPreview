@@ -1,0 +1,214 @@
+<resources>
+    <string name="app_name">UIWidget</string>
+
+    <!--后退-->
+    <string name="icon_font_606">\ue606</string>
+    <!--评论-->
+    <string name="icon_font_comment">\ue68f</string>
+    <!--收藏-->
+    <string name="icon_font_collection">\ue68e</string>
+    <!--赞-->
+    <string name="icon_font_like">\ue695</string>
+    <!--踩-->
+    <string name="icon_font_dislike">\ue696</string>
+    <!--下拉箭头20-->
+    <string name="icon_font_down_arrow20">\ue624</string>
+    <!--编辑-->
+    <string name="icon_font_editor">\ue688</string>
+    <!--编辑2-->
+    <string name="icon_font_editor_2">\ue689</string>
+    <!--更多-->
+    <string name="icon_font_more">\ue607</string>
+    <!--消息中心-->
+    <string name="icon_font_message_center">\ue659</string>
+    <!--发现-->
+    <string name="icon_font_discover">\ue655</string>
+    <!--关闭（空心）-->
+    <string name="icon_font_hollow_close">\ue638</string>
+    <!--勾选20-->
+    <string name="icon_font_check">\ue664</string>
+    <!--收藏的内容-->
+    <string name="icon_font_follow">\ue692</string>
+    <!--收藏-->
+    <string name="icon_font_collection1">\ue62c</string>
+    <!--搜索-->
+    <string name="icon_font_search">\ue65b</string>
+    <!--问号-->
+    <string name="icon_font_question">\ue679</string>
+    <!--编辑-->
+    <string name="icon_font_editor3">\ue635</string>
+    <!--大图模式图标-->
+    <string name="icon_font_grid_mode">\ue65e</string>
+    <!--列表模式图标-->
+    <string name="icon_font_list_mode">\ue65d</string>
+    <!--圆箭头20填充-->
+    <string name="icon_font_circle_arrow">\ue660</string>
+    <!--箭头30-->
+    <string name="icon_font_arrow_right">\ue66d</string>
+    <!--圆箭头15-上-->
+    <string name="icon_font_circle_arrow_up">\ue698</string>
+    <!--圆箭头15-下-->
+    <string name="icon_font_circle_arrow_down">\ue699</string>
+    <!--箭头20-右-->
+    <string name="icon_font_arrow_20_right">\ue669</string>
+    <!--箭头20-左-->
+    <string name="icon_font_arrow_20_left">\ue667</string>
+    <!--圆形勾选20-->
+    <string name="icon_font_round_checked">\ue678</string>
+    <!-- 删除-->
+    <string name="icon_font_del">\ue637</string>
+    <!-- 编辑-->
+    <string name="icon_font_edit">\ue635</string>
+    <!--扫码-->
+    <string name="icon_font_sao">\ue65c</string>
+    <!--语音-->
+    <string name="icon_font_voice">\ue671</string>
+    <!--关闭-->
+    <string name="icon_font_close">\ue629</string>
+    <!--我的-->
+    <string name="icon_font_avatar">\ue656</string>
+    <!--圆形减号20-->
+    <string name="icon_font_round_minus">\ue683</string>
+    <!--刷新-->
+    <string name="icon_font_refresh">\ue6b3</string>
+    <!--相机-->
+    <string name="icon_font_camera">\ue6b4</string>
+    <!--盾牌对勾20-->
+    <string name="icon_font_affirm">\ue6b5</string>
+    <!--购物车-->
+    <string name="icon_font_653">\ue653</string>
+    <!--箭头20-上-->
+    <string name="icon_font_665">\ue665</string>
+    <!--箭头20-下-->
+    <string name="icon_font_666">\ue666</string>
+    <!--分享-->
+    <string name="icon_font_63f">\ue63f</string>
+    <!--圆关闭30-->
+    <string name="icon_font_63e">\ue63e</string>
+    <!--叹号-15-->
+    <string name="icon_font_6b9">\ue6b9</string>
+    <!--时钟2-15-->
+    <string name="icon_font_clock">\ue6bb</string>
+    <!--圆对勾-->
+    <string name="icon_font_round_check">\ue6b6</string>
+    <!--圆圈对勾15-->
+    <string name="icon_font_6b1">\ue6b1</string>
+    <!--圆圈20-->
+    <string name="icon_font_6af">\ue6af</string>
+    <!--方箭头20-->
+    <string name="icon_font_square_arrow">\ue677</string>
+    <!--圆箭头15-下-->
+    <string name="icon_font_699">\ue699</string>
+    <!--人名币符号-->
+    <string name="icon_font_67c">\ue67c</string>
+    <!--微信-->
+    <string name="icon_font_685">\ue685</string>
+    <!--收藏-->
+    <string name="icon_font_62c">\ue62c</string>
+    <!--店铺-->
+    <string name="icon_font_63a">\ue63a</string>
+    <!--加号-->
+    <string name="dialog_add"> \ue67f</string>
+    <!--减号-->
+    <string name="dialog_subtract">\ue680</string>
+    <!--客服20-->
+    <string name="icon_font_684">\ue684</string>
+    <!--置顶-->
+    <string name="icon_font_60b">\ue60b</string>
+    <!--店铺-->
+    <string name="icon_font_652">\ue652</string>
+    <!--足迹-->
+    <string name="icon_font_63c">\ue63c</string>
+    <!--人民币分享-->
+    <string name="icon_font_6ad">\ue6ad</string>
+    <!--收藏-->
+    <string name="icon_font_601">\ue601</string>
+    <!--已收藏-->
+    <string name="icon_font_602">\ue602</string>
+    <!--店铺20-->
+    <string name="icon_font_603">\ue603</string>
+    <!--购物车-->
+    <string name="icon_font_604">\ue604</string>
+    <!--播放-->
+    <string name="icon_font_61b">\ue61b</string>
+    <!--暂停-->
+    <string name="icon_font_61c">\ue61c</string>
+    <!--全屏-->
+    <string name="icon_font_618">\ue618</string>
+    <!--退出全屏-->
+    <string name="icon_font_61a">\ue61a</string>
+    <!--回复-->
+    <string name="icon_font_605">\ue605</string>
+    <!--不支持30-->
+    <string name="icon_font_613">\ue613</string>
+    <!--浏览历史20-->
+    <string name="icon_font_608">\ue608</string>
+    <!--地址坐标20-填充-->
+    <string name="icon_font_60e">\ue60e</string>
+    <!--写评论20-->
+    <string name="icon_font_609">\ue609</string>
+    <!--试读20-->
+    <string name="icon_font_614">\ue614</string>
+    <!--分类搜索-->
+    <string name="icon_font_654">\ue654</string>
+    <!--热度-->
+    <string name="icon_font_60d">\ue60d</string>
+    <!--设置-->
+    <string name="icon_font_65a">\ue65a</string>
+    <!--客服-->
+    <string name="icon_font_61d">\ue61d</string>
+    <!--右箭头加粗-->
+    <string name="icon_font_6c3">\ue6c3</string>
+    <!--社区任务-->
+    <string name="icon_font_6c4">\ue6c4</string>
+    <!--普通会员-->
+    <string name="icon_font_6c5">\ue6c5</string>
+    <!--银卡会员-->
+    <string name="icon_font_6c6">\ue6c6</string>
+    <!--金卡会员-->
+    <string name="icon_font_6c7">\ue6c7</string>
+    <!--钻石会员-->
+    <string name="icon_font_6c8">\ue6c8</string>
+    <!--当当自营-->
+    <string name="icon_font_62f">\ue62f</string>
+    <!--热门搜索-->
+    <string name="icon_font_628">\ue628</string>
+    <!--最近搜索-->
+    <string name="icon_font_62e">\ue62e</string>
+    <!--圆圈叉号-->
+    <string name="icon_font_6b2">\ue6b2</string>
+    <!--定位-->
+    <string name="icon_font_60c">\ue60c</string>
+    <!--时钟-->
+    <string name="icon_font_6ba">\ue6ba</string>
+    <!--电子书价-->
+    <string name="icon_font_67b">\ue67b</string>
+    <!--为您推荐-->
+    <string name="icon_font_619">\ue619</string>
+    <!--下箭头加粗-->
+    <string name="icon_font_66b">\ue66b</string>
+    <!--上箭头加粗-->
+    <string name="icon_font_66a">\ue66a</string>
+    <!--全球购-->
+    <string name="icon_font_627">\ue627</string>
+    <!--加号粗体-->
+    <string name="icon_font_62a">\ue62a</string>
+    <!--减号粗体-->
+    <string name="icon_font_62b">\ue62b</string>
+    <!--联合促销-->
+    <string name="icon_font_62d">\ue62d</string>
+    <!--时钟-->
+    <string name="icon_font_6bb">\ue6bb</string>
+    <!--分享-->
+    <string name="icon_font_68d">\ue68d</string>
+    <!--点赞-->
+    <string name="icon_font_662">\ue662</string>
+    <!--填充点赞-->
+    <string name="icon_font_661">\ue661</string>
+    <!--填充星星-->
+    <string name="icon_font_630">\ue630</string>
+    <!--关注-->
+    <string name="icon_font_631">\ue631</string>
+    <!--降价提醒-->
+    <string name="icon_font_633">\ue633</string>
+</resources>
