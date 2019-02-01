@@ -7,12 +7,16 @@ package main;
  * Description :the description of this file
  */
 public class Common {
-    public static String ROOT_PATH = null;
+    public static boolean MODE_ALL = false;
+
+    public static final String PROJECT = "ICON_FONT_PREVIEW";
+    public static final String CAHCE_NAME = "ICON_FONT_PREVIEW_CACHE.xml";
+    public static final String TTF_KEY = PROJECT + "_TTF";
+    public static final String XML_KEY = PROJECT + "_XML";
     public static final String ICON_START = "\\ue";
-    public static final String FONT_STRING_PATH = "%s/app/src/main/string.xml";
     public static final String HTML_PATH = "/main/html/iconfont.html";
-    public static String RESULT_PATH = "%s/preview_result.html";
-    public static final String FONT_PATH = "/main/iconfont.ttf";
+    public static String RESULT_PATH = "%s/PluginCache/preview_result.html";
+    public static String CACHE_PATH = "%s/PluginCache/path_cache.txt";
     public static final String NONE_DEFINE = "未定义";
     /**
      * 创建li
@@ -36,8 +40,4 @@ public class Common {
             "          url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */\n" +
             "        }";
 
-    public static String tranPath(String path) {
-        //return String.format(path, ".");
-        return path;
-    }
 }

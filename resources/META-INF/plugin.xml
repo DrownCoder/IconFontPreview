@@ -1,40 +1,39 @@
 <idea-plugin>
-  <id>com.xuan.plug.iconfontpreview</id>
-  <name>IconFontPreview</name>
-  <version>1.0</version>
-  <vendor email="drowncoder@163.com" url="https://github.com/DrownCoder">DrownCoder</vendor>
+    <id>com.xuan.plugin.iconfontpreview</id>
+    <name>IconFontPreview</name>
+    <version>1.0</version>
+    <vendor email="drowncoder@163.com" url="https://github.com/DrownCoder">DrownCoder</vendor>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+    <description><![CDATA[
+      <p>使用说明</p>
+      <p>第一次设置工程下ttf字体文件路径和定义iconfont的string.xml路径，
+      点击确认后便会生成Html文件，预览定义的IconFont资源</p>
     ]]></description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
+    <change-notes />
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0" />
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="main.PersistentPath"
+            serviceInterface="main.PersistentPath" />
+    </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-    <action id="IconfontPreview.main.PreviewAction" class="main.PreviewAction" text="IconFontPreview"
-        description="preview the string value of iconfont" icon="/image/cap.png"
-    >
-      <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
-    </action>
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+        <action id="IconfontPreview.main.PreviewAction" class="main.PreviewAction"
+            text="IconFontPreview" description="preview the string value of iconfont"
+            icon="/image/cap.png">
+            <add-to-group group-id="ToolbarRunGroup" anchor="last" />
+        </action>
+    </actions>
 
 </idea-plugin>

@@ -68,7 +68,7 @@ public class IconFontXmlParser extends DefaultHandler {
         flag = false;
         if (sb != null && sb.length() > 0) {
             fonts.get(fonts.size() - 1).setFontValue(sb.toString());
-            System.out.println(sb.toString());
+            //System.out.println(sb.toString());
         }
     }
 
@@ -99,8 +99,8 @@ public class IconFontXmlParser extends DefaultHandler {
                 iterator.remove();
             }
         }
-        System.out.println("\\ue" + Integer.toHexString(maxValue));
-        System.out.println("\\ue" + Integer.toHexString(minValue));
+//        System.out.println("\\ue" + Integer.toHexString(maxValue));
+//        System.out.println("\\ue" + Integer.toHexString(minValue));
     }
 
     public HashMap<String, XmlIconFontModel> getFonts() {
