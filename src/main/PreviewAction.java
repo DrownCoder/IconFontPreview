@@ -29,6 +29,7 @@ public class PreviewAction extends AnAction {
         AtomicReference<String> xmlPath =
                 new AtomicReference<>(PersistentPath.getInstance().getXmlPath());
         if (ttfPath.get() == null || ttfPath.get().length() == 0) {
+            //无缓存路径，重新选择
             TTFChooser.show(rootPath).setOnPathSelected((ttfPathResult, xmlPathResult) -> {
                 ttfPath.set(ttfPathResult);
                 xmlPath.set(xmlPathResult);
@@ -36,11 +37,13 @@ public class PreviewAction extends AnAction {
                 Preview.go(ttfPath.get(), xmlPath.get());
             });
         } else {
+            //直接走缓存
             Preview.go(ttfPath.get(), xmlPath.get());
         }
     }
 
     private void init(String rootPath) {
+        PersistentPath.clear();
         Common.RESULT_PATH = String.format(Common.RESULT_PATH, rootPath);
         Common.CACHE_PATH = String.format(Common.CACHE_PATH, rootPath);
     }

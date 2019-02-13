@@ -33,6 +33,12 @@ public class PersistentPath {
         return instance;
     }
 
+    public static void clear() {
+        if (instance != null) {
+            instance = null;
+        }
+    }
+
     public PersistentPath() {
         init();
     }

@@ -13,6 +13,7 @@ import java.util.List;
 import main.model.XmlIconFontModel;
 
 import static main.Common.ICON_START;
+import static main.Common.ICON_START_SUB;
 
 
 /**
@@ -79,20 +80,29 @@ public class IconFontXmlParser extends DefaultHandler {
         while (iterator.hasNext()) {
             XmlIconFontModel model = iterator.next();
             if (model.getFontKey().startsWith("icon_font")
-                    || model.getFontValue().startsWith(ICON_START)) {
+                    || model.getFontValue().startsWith(ICON_START)
+                    || model.getFontValue().startsWith(ICON_START_SUB)) {
                 result.put(model.getFontValue(), model);
-                System.out.println(model.getFontValue());
-                int value = Integer.valueOf(model.getFontValue().substring(3), 16);
-                if (minValue == 0) {
-                    //初始化
-                    minValue = value;
-                    maxValue = minValue;
-                } else {
-                    if (value > maxValue) {
-                        maxValue = value;
-                    }
-                    if (value < minValue) {
+//                System.out.println(model.getFontValue());
+                int value = -1;
+                if (model.getFontValue().startsWith(ICON_START)) {
+                    value = Integer.valueOf(model.getFontValue().substring(3), 16);
+                } else if (model.getFontValue().startsWith(ICON_START_SUB)) {
+                    value = Integer.valueOf(model.getFontValue().substring(3,
+                            model.getFontValue().length() - 1), 16);
+                }
+                if (value != -1) {
+                    if (minValue == 0) {
+                        //初始化
                         minValue = value;
+                        maxValue = minValue;
+                    } else {
+                        if (value > maxValue) {
+                            maxValue = value;
+                        }
+                        if (value < minValue) {
+                            minValue = value;
+                        }
                     }
                 }
             } else {

@@ -73,6 +73,9 @@ public class HtmlPrinter {
                 String value = "&#xe" + code.substring(3) + ";";
                 container.append(String.format(Common.ICON_ITEM, value,
                         entry.getValue().getFontKey(), code));
+            } else if (code.startsWith(Common.ICON_START_SUB)) {
+                container.append(String.format(Common.ICON_ITEM, code,
+                        entry.getValue().getFontKey(), code));
             }
         }
     }

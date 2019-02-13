@@ -14,6 +14,7 @@ public class Common {
     public static final String TTF_KEY = PROJECT + "_TTF";
     public static final String XML_KEY = PROJECT + "_XML";
     public static final String ICON_START = "\\ue";
+    public static final String ICON_START_SUB = "&#x";
     public static final String HTML_PATH = "/main/html/iconfont.html";
     public static String RESULT_PATH = "%s/PluginCache/preview_result.html";
     public static String CACHE_PATH = "%s/PluginCache/path_cache.txt";
