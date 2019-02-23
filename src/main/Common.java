@@ -24,7 +24,7 @@ public class Common {
      */
     public static final String ICON_ITEM = "<li>\n" +
             "                <i class=\"icon iconfont\">%s</i>\n" +
-            "                    <div class=\"name\">@string/%s</div>\n" +
+            "                    <div class=\"name\">%s</div>\n" +
             "                    <div class=\"code\">%s</div>\n" +
             "                </li>";
 
