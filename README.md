@@ -18,7 +18,7 @@
 ##### 1.安装完插件后,在操作面板会生成一个草帽的Icon，点击操作面版的草帽icon(ONE PIECE)
 ![step1](https://upload-images.jianshu.io/upload_images/7866586-94afdf6f1cc117ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ##### 2.第一次需要设置工程下ttf字体文件路径和定义iconfont的string.xml路径
-![step2.jpg](https://upload-images.jianshu.io/upload_images/7866586-0ba179c2588835f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![step2.jpg](https://upload-images.jianshu.io/upload_images/7866586-0ba179c2588835f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 这一步只会在第一次才会使用，因为本地会有缓存，后面的会读取缓存的目录（根目录下的PlugCache）
 ##### 3.点击确定后或者以后在点击草帽就会在浏览器中打开预览定义的IconFont图标了
 ![ONE PIECE](https://upload-images.jianshu.io/upload_images/7866586-b58b9e8dd4578db1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
